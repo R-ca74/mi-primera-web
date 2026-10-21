@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<meta name="description" content="VisioNet ofrece instalación de cámaras de vigilancia, redes, telecomunicaciones y diseño de infraestructura de cableado para hogares y negocios. Conexión, control y confianza.">
+<meta property="og:title" content="VisioNet | Conexión, control y confianza">
+<meta property="og:description" content="Redes, cableado estructurado e instalación de cámaras de vigilancia para hogares y negocios.">
+<meta property="og:type" content="website">
+<title>VisioNet | Redes, cámaras y telecomunicaciones</title>
+<style>
+:root{--bg:#07111f;--bg2:#0b1726;--panel:#101f32;--panel2:#132941;--text:#f4f8ff;--muted:#aabbd0;--cyan:#3ce0ed;--blue:#548cff;--line:rgba(255,255,255,.12);--green:#5cf2b2;--shadow:0 24px 80px rgba(0,0,0,.25)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{font-family:Inter,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{background:#040a13;color:#b6c8dc;font-size:.8rem;border-bottom:1px solid var(--line)}
+.topbar .inner{min-height:35px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.topbar strong{color:var(--green);font-weight:650}
+header{position:sticky;top:0;z-index:50;background:rgba(7,17,31,.91);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:11px;font-size:1.55rem;font-weight:850;letter-spacing:-.7px}
+.logo{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;color:#05111e;background:linear-gradient(135deg,var(--cyan),var(--blue));box-shadow:0 0 28px #3ce0ed25;font-weight:950}
+.brand-net{color:var(--cyan)}
+nav{display:flex;align-items:center;gap:25px;color:#c1cedd;font-size:.91rem}
+nav a:hover{color:var(--cyan)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:10px;font-weight:750;border:1px solid transparent;transition:transform .2s,box-shadow .2s,border-color .2s;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:linear-gradient(110deg,var(--cyan),#75a4ff);color:#06111e;box-shadow:0 10px 28px #3ce0ed1a}
+.btn.secondary{background:#ffffff07;border-color:var(--line);color:var(--text)}
+.btn.secondary:hover{border-color:#3ce0ed80}
+.menu-toggle{display:none;background:transparent;border:1px solid var(--line);color:white;padding:8px 11px;border-radius:9px}
+.hero{position:relative;overflow:hidden;padding:100px 0 76px;background:radial-gradient(ellipse at 84% 15%,#1d6d8330,transparent 33%),radial-gradient(ellipse at 0 100%,#254e9a20,transparent 35%)}
+.hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:58px;align-items:center;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--cyan);font-size:.78rem;font-weight:850;text-transform:uppercase;letter-spacing:1.8px}
+.eyebrow:before{content:"";width:25px;height:2px;background:var(--cyan)}
+h1{font-size:clamp(2.8rem,5.5vw,5.2rem);line-height:1.015;letter-spacing:-3px;margin:22px 0}
+h1 em{font-style:normal;color:var(--cyan)}
+.hero-copy{font-size:1.1rem;color:var(--muted);max-width:600px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.trust-points{display:flex;gap:19px;flex-wrap:wrap;margin-top:30px;color:#c2d0df;font-size:.86rem}
+.trust-points span{display:flex;align-items:center;gap:7px}
+.tick{color:var(--green);font-weight:900}
+.hero-art{min-height:430px;border:1px solid #3ce0ed38;border-radius:28px;position:relative;overflow:hidden;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,#3ce0ed1d,transparent 43%),linear-gradient(145deg,#122c43,#091421);box-shadow:var(--shadow)}
+.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #3ce0ed24;border-radius:50%;width:300px;height:300px}
+.hero-art:after{width:430px;height:430px}
+.net-art{position:relative;z-index:1;width:280px;height:280px}
+.node{position:absolute;display:grid;place-items:center;width:65px;height:65px;border-radius:18px;background:#102c43;border:1px solid #3ce0ed88;color:var(--cyan);box-shadow:0 0 28px #3ce0ed1c}
+.node svg{width:30px;height:30px}
+.node.main{width:91px;height:91px;left:95px;top:95px;border-radius:27px;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#07111f}
+.node.top{left:108px;top:0}.node.left{left:0;top:108px}.node.right{right:0;top:108px}.node.bottom{left:108px;bottom:0}
+.wire{position:absolute;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.8}
+.wire.a{width:90px;left:95px;top:92px;transform:rotate(-48deg)}.wire.b{width:90px;left:95px;top:184px;transform:rotate(48deg)}.wire.c{width:90px;left:155px;top:92px;transform:rotate(48deg)}.wire.d{width:90px;left:155px;top:184px;transform:rotate(-48deg)}
+.art-label{position:absolute;bottom:22px;color:#8fa9c1;letter-spacing:1.4px;text-transform:uppercase;font-size:.73rem}
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#0b1726}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.stat{padding:25px 20px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border:0}.stat strong{display:block;color:var(--cyan);font-size:1.08rem}.stat span{font-size:.86rem;color:var(--muted)}
+section{padding:86px 0}
+.section-head{max-width:690px;margin-bottom:40px}
+.section-head h2,.about-copy h2,.contact-info h2{font-size:clamp(2rem,3.8vw,3.25rem);line-height:1.13;letter-spacing:-1.4px;margin:14px 0}
+.section-head p,.about-copy p,.contact-info>p{color:var(--muted)}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(145deg,var(--panel),#0b1726);border:1px solid var(--line);border-radius:19px;padding:27px;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-5px);border-color:#3ce0ed77}
+.iconbox{width:53px;height:53px;border-radius:15px;display:grid;place-items:center;color:var(--cyan);background:#3ce0ed14;margin-bottom:20px}
+.iconbox svg{width:28px;height:28px}
+.card h3{font-size:1.17rem;margin-bottom:10px}.card p{font-size:.94rem;color:var(--muted)}
+.card ul{list-style:none;margin-top:17px;font-size:.89rem;color:#d8e4f2}
+.card li{margin-top:8px}.card li:before{content:"✓";color:var(--green);font-weight:900;margin-right:9px}
+.band{background:linear-gradient(180deg,#1023398c,#07111f);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:60px;align-items:center}
+.diagram-card{padding:29px;border:1px solid var(--line);border-radius:23px;background:linear-gradient(145deg,#102338,#0b1726);box-shadow:var(--shadow)}
+.diagram-label{font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);font-weight:850}
+.diagram-card h3{font-size:1.4rem;line-height:1.3;margin:10px 0 24px}
+.diagram{display:flex;flex-direction:column;align-items:center;gap:10px}
+.diagram-box{width:min(100%,300px);padding:12px 10px;text-align:center;border:1px solid #3ce0ed4d;background:#132c42;border-radius:10px;font-size:.9rem;font-weight:700}
+.diagram-line{height:17px;width:2px;background:var(--cyan)}
+.diagram-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;width:100%}
+.diagram-row .diagram-box{font-size:.76rem;padding:12px 4px}
+.benefits{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.benefit{display:flex;gap:10px;font-size:.9rem;color:#e1ebf6}.benefit span{color:var(--green);font-weight:900}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.step{padding:24px;border:1px solid var(--line);border-radius:17px;background:#ffffff04}
+.step-number{font-size:.8rem;color:var(--cyan);letter-spacing:1.3px;font-weight:850}
+.step h3{font-size:1.06rem;margin:12px 0 8px}.step p{color:var(--muted);font-size:.9rem}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.why{padding:25px 0;border-top:1px solid var(--line)}
+.why h3{margin:10px 0}.why p{color:var(--muted);font-size:.93rem}
+.cta-section{padding:0 0 85px}
+.cta{padding:43px;border:1px solid #3ce0ed40;border-radius:24px;background:radial-gradient(circle at 100% 0,#548cff26,transparent 40%),linear-gradient(120deg,#122b41,#0b1726);display:flex;align-items:center;justify-content:space-between;gap:30px}
+.cta h2{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.16;margin-bottom:9px}.cta p{max-width:650px;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px}
+.contact-info h2{margin-bottom:15px}
+.contact-detail{display:flex;gap:13px;align-items:flex-start;margin-top:22px}
+.contact-detail .iconbox{width:44px;height:44px;flex-shrink:0;margin:0}
+.contact-detail small{display:block;color:#8fa9c1;font-size:.78rem}.contact-detail strong{font-size:.94rem}
+.form-card{padding:29px;border:1px solid var(--line);border-radius:21px;background:var(--panel)}
+.form-card h3{font-size:1.35rem;margin-bottom:4px}.form-intro{color:var(--muted);font-size:.9rem;margin-bottom:23px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;color:#d9e5f2;font-size:.86rem;margin-bottom:7px}
+input,select,textarea{width:100%;background:#081523;color:var(--text);border:1px solid #ffffff20;border-radius:9px;padding:12px 13px;margin-bottom:16px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--cyan)}
+textarea{min-height:120px;resize:vertical}
+.form-card .btn{width:100%;border:0}
+.fineprint{font-size:.76rem;color:#8fa9c1;margin-top:12px}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+details{padding:20px;border:1px solid var(--line);border-radius:13px;background:#ffffff03}
+summary{cursor:pointer;font-weight:750}details p{color:var(--muted);font-size:.91rem;margin-top:12px}
+footer{border-top:1px solid var(--line);background:#050d17;padding:36px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.3fr .7fr .9fr;gap:35px;padding-bottom:28px}
+.footer-brand p{max-width:360px;color:var(--muted);font-size:.9rem;margin-top:14px}
+footer h4{margin-bottom:12px}footer ul{list-style:none;color:var(--muted);font-size:.88rem}footer li{margin:7px 0}footer a:hover{color:var(--cyan)}
+.legal{padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#8195aa;font-size:.78rem}
+.disclaimer{max-width:800px;margin-top:10px;color:#71869d;font-size:.74rem}
+.toast{display:none;padding:13px 15px;border-radius:10px;background:#123e34;border:1px solid #5cf2b255;color:#cffff0;margin-top:15px;font-size:.9rem}
+@media(max-width:900px){nav{gap:14px}nav a:not(.nav-contact){display:none}.menu-toggle{display:block}.nav nav.open{display:flex;position:absolute;top:76px;left:0;right:0;background:#081523;padding:20px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.nav nav.open a{display:block}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding:72px 0 60px}.hero-art{min-height:370px}.service-grid{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr 1fr}.about-grid{gap:35px}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
+@media(max-width:580px){.topbar .inner{justify-content:center}.topbar .inner span:last-child{display:none}.brand{font-size:1.35rem}.nav{min-height:68px}.nav nav.open{top:68px}h1{letter-spacing:-1.8px}.service-grid,.process-grid,.why-grid,.faq-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line);padding:16px}.stat:last-child{border-bottom:0}section{padding:63px 0}.hero-art{min-height:315px}.net-art{transform:scale(.82)}.form-row,.benefits{grid-template-columns:1fr}.cta{padding:29px;align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr}.footer-brand{grid-column:auto}.diagram-row .diagram-box{font-size:.68rem}.trust-points{gap:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container inner"><span><strong>VISIÓN DE CONECTIVIDAD</strong> · Soluciones para hogares y negocios</span><span>Conexión, control y confianza.</span></div></div>
+<header>
+ <div class="container nav">
+  <a class="brand" href="#inicio" aria-label="VisioNet inicio"><span class="logo">V</span><span>Visio<span class="brand-net">Net</span></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav id="mainNav" aria-label="Menú principal">
+   <a href="#servicios">Servicios</a><a href="#nosotros">Nosotros</a><a href="#proceso">Cómo trabajamos</a><a href="#preguntas">Preguntas</a><a href="#contacto" class="btn primary nav-contact">Solicitar cotización ↗</a>
+  </nav>
+ </div>
+</header>
+<main>
+<section class="hero" id="inicio">
+ <div class="container hero-grid">
+  <div>
+   <span class="eyebrow">Conectividad · Seguridad · Planeación</span>
+   <h1>Tu espacio, más conectado y <em>protegido.</em></h1>
+   <p class="hero-copy">Diseñamos e instalamos soluciones de redes, cableado y cámaras de vigilancia para hogares y negocios. Planeamos cada proyecto con atención al orden, la funcionalidad y tus necesidades.</p>
+   <div class="hero-actions"><a class="btn primary" href="#contacto">Solicitar cotización <span>↗</span></a><a class="btn secondary" href="#servicios">Explorar servicios ↓</a></div>
+   <div class="trust-points"><span><b class="tick">✓</b> Planeación clara</span><span><b class="tick">✓</b> Instalación organizada</span><span><b class="tick">✓</b> Atención personalizada</span></div>
+  </div>
+  <div class="hero-art" role="img" aria-label="Ilustración de dispositivos conectados en una red">
+   <div class="net-art">
+    <div class="wire a"></div><div class="wire b"></div><div class="wire c"></div><div class="wire d"></div>
+    <div class="node top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6"/></svg></div>
+    <div class="node left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 9a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/></svg></div>
+    <div class="node main"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8 12h8M12 8v8"/></svg></div>
+    <div class="node right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><rect x="3" y="10" width="18" height="10" rx="2"/><circle cx="8" cy="15" r="1"/></svg></div>
+    <div class="node bottom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg></div>
+   </div><div class="art-label">VisioNet · Conectividad inteligente</div>
+  </div>
+ </div>
+</section>
+<div class="stats"><div class="container stats-grid"><div class="stat"><strong>Redes y cableado</strong><span>Conexiones pensadas para tu espacio</span></div><div class="stat"><strong>Videovigilancia</strong><span>Instalación y configuración de cámaras</span></div><div class="stat"><strong>Diseño de infraestructura</strong><span>Rutas de cable y puntos de conexión</span></div></div></div>
+<section id="servicios"><div class="container">
+ <div class="section-head"><span class="eyebrow">Servicios</span><h2>Soluciones tecnológicas, bien planeadas.</h2><p>Desde la distribución del cableado hasta la instalación de cámaras, te ayudamos a organizar la infraestructura para que se adapte a tu vivienda o negocio.</p></div>
+ <div class="service-grid">
+  <article class="card"><div class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 9a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/></svg></div><h3>Redes y telecomunicaciones</h3><p>Instalación y organización de conexiones para dispositivos, computadoras y equipos de red en espacios residenciales y comerciales.</p><ul><li>Cableado de red Ethernet</li><li>Instalación de puntos de conexión</li><li>Configuración básica de equipos</li><li>Diagnóstico de conectividad</li></ul></article>
+  <article class="card"><div class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h11a3 3 0 0 1 3 3v4H3z"/><path d="m17 10 4-2v8l-4-2M7 14l-2 6M12 14l2 6"/></svg></div><h3>Instalación de cámaras</h3><p>Montaje y puesta en marcha de sistemas de videovigilancia para observar accesos, entradas, patios, oficinas y áreas importantes.</p><ul><li>Recomendación de ubicaciones</li><li>Montaje y tendido de cable</li><li>Configuración de grabación compatible</li><li>Pruebas de imagen y funcionamiento</li></ul></article>
+  <article class="card"><div class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="8.5" y="14" width="7" height="7" rx="1"/><path d="M6.5 10v2h11v-2M12 12v2"/></svg></div><h3>Arquitectura de red</h3><p>Planeación de las rutas por donde pasarán los cables en una casa o negocio, procurando orden, protección y acceso para mantenimiento.</p><ul><li>Revisión del espacio y necesidades</li><li>Mapa de rutas de cableado</li><li>Ubicación de puntos de red</li><li>Organización y etiquetado</li></ul></article>
+ </div>
+</div></section>
+<section class="band" id="nosotros"><div class="container about-grid">
+ <div class="diagram-card"><span class="diagram-label">Ejemplo de planeación</span><h3>Una red ordenada empieza con un plano.</h3><div class="diagram"><div class="diagram-box">Router / equipo principal</div><div class="diagram-line"></div><div class="diagram-box">Ruta de cableado planificada</div><div class="diagram-line"></div><div class="diagram-row"><div class="diagram-box">Habitación</div><div class="diagram-box">Oficina</div><div class="diagram-box">Cámaras</div></div></div></div>
+ <div class="about-copy"><span class="eyebrow">Sobre VisioNet</span><h2>La tecnología funciona mejor cuando se planea bien.</h2><p>VisioNet es una marca enfocada en soluciones de conectividad, infraestructura de red e instalación de cámaras de vigilancia. Nuestro enfoque es entender el espacio, explicar las opciones y realizar una instalación ordenada según el alcance acordado.</p><p>Queremos que cada cliente sepa qué se instalará, dónde se colocará y qué necesita para utilizar su sistema. Cada proyecto se revisa de acuerdo con las condiciones reales del inmueble.</p><div class="benefits"><div class="benefit"><span>✓</span><div>Alcance del trabajo explicado</div></div><div class="benefit"><span>✓</span><div>Propuesta según necesidades</div></div><div class="benefit"><span>✓</span><div>Cuidado del cableado y acabados</div></div><div class="benefit"><span>✓</span><div>Pruebas al finalizar la instalación</div></div></div></div>
+</div></section>
+<section id="proceso"><div class="container"><div class="section-head"><span class="eyebrow">Cómo trabajamos</span><h2>Un proceso claro, de la idea a la instalación.</h2><p>Organizamos cada proyecto por etapas para definir necesidades, evitar confusiones y acordar el trabajo antes de comenzar.</p></div><div class="process-grid">
+ <article class="step"><span class="step-number">PASO 01</span><h3>Nos cuentas qué necesitas</h3><p>Platicamos sobre el espacio, los equipos y el objetivo de la instalación.</p></article>
+ <article class="step"><span class="step-number">PASO 02</span><h3>Revisamos el lugar</h3><p>Identificamos rutas, ubicaciones, distancias y condiciones de instalación.</p></article>
+ <article class="step"><span class="step-number">PASO 03</span><h3>Propuesta y cotización</h3><p>Se definen alcance, materiales, costos y tiempos antes de autorizar el trabajo.</p></article>
+ <article class="step"><span class="step-number">PASO 04</span><h3>Instalación y pruebas</h3><p>Se realiza el trabajo acordado y se comprueba el funcionamiento de los equipos instalados.</p></article>
+</div></div></section>
+<section class="band"><div class="container"><div class="section-head"><span class="eyebrow">Nuestro compromiso</span><h2>Servicio responsable y comunicación directa.</h2><p>Queremos que tengas claridad antes, durante y después de la instalación.</p></div><div class="why-grid">
+ <article class="why"><span class="eyebrow">01 · Claridad</span><h3>Sin sorpresas en el alcance</h3><p>Las tareas, materiales y costos se explican en la cotización antes de iniciar.</p></article>
+ <article class="why"><span class="eyebrow">02 · Orden</span><h3>Infraestructura organizada</h3><p>Planeamos el recorrido del cableado para facilitar el uso y el mantenimiento futuro.</p></article>
+ <article class="why"><span class="eyebrow">03 · Revisión</span><h3>Pruebas al finalizar</h3><p>Verificamos los equipos y explicamos los aspectos básicos de su funcionamiento.</p></article>
+</div></div></section>
+<section id="preguntas"><div class="container"><div class="section-head"><span class="eyebrow">Preguntas frecuentes</span><h2>Lo que conviene saber antes de contratar.</h2></div><div class="faq-grid">
+ <details><summary>¿Instalan cámaras en casas y negocios?</summary><p>El sitio está preparado para ofrecer instalación en espacios residenciales y comerciales. El servicio específico depende de la revisión del lugar y del alcance acordado.</p></details>
+ <details><summary>¿Pueden planear por dónde pasarán los cables?</summary><p>Sí. La arquitectura de red consiste en planear rutas, puntos de conexión y ubicación de equipos, considerando el inmueble y procurando una instalación ordenada.</p></details>
+ <details><summary>¿La cotización tiene un precio fijo?</summary><p>El costo depende de la cantidad de cámaras o puntos de red, distancias, materiales, altura de montaje, condiciones del lugar y configuración requerida. Solicita una cotización según tu proyecto.</p></details>
+ <details><summary>¿Puedo solicitar una visita de revisión?</summary><p>Utiliza el formulario para describir tu proyecto. La disponibilidad de visitas, cobertura y cualquier costo asociado deben confirmarse directamente con VisioNet.</p></details>
+</div></div></section>
+<section class="cta-section"><div class="container"><div class="cta"><div><h2>¿Listo para mejorar tu conexión o vigilancia?</h2><p>Cuéntanos tu idea y prepara con VisioNet el siguiente paso para tu instalación de red o cámaras.</p></div><a class="btn primary" href="#contacto">Solicitar información ↗</a></div></div></section>
+<section id="contacto"><div class="container contact-grid">
+ <div class="contact-info"><span class="eyebrow">Contacto</span><h2>Hablemos de tu proyecto.</h2><p>Completa los datos y se preparará un mensaje con la información de tu solicitud. Antes de publicar, agrega los datos oficiales de contacto de la empresa.</p>
+  <div class="contact-detail"><div class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><small>Zona de servicio</small><strong id="serviceArea">Valladolid, Yucatán y alrededores</strong></div></div>
+  <div class="contact-detail"><div class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.4 2.8a2 2 0 0 1-.6 1.7L7.6 9.5a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 1.7-.6l2.8.4a2 2 0 0 1 1.6 1.9Z"/></svg></div><div><small>Teléfono y WhatsApp</small><strong id="phoneDisplay">Pendiente de configurar</strong></div></div>
+  <div class="contact-detail"><div class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><div><small>Correo electrónico</small><strong id="emailDisplay">Pendiente de configurar</strong></div></div>
+ </div>
+ <form class="form-card" id="contactForm"><h3>Solicita información</h3><p class="form-intro">Cuéntanos qué necesitas para preparar tu solicitud.</p>
+  <div class="form-row"><div><label for="name">Nombre *</label><input id="name" name="name" autocomplete="name" placeholder="Tu nombre" required></div><div><label for="phone">Teléfono *</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Tu número" required></div></div>
+  <label for="email">Correo (opcional)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="tucorreo@ejemplo.com">
+  <label for="service">Servicio de interés *</label><select id="service" name="service" required><option value="">Selecciona una opción</option><option>Instalación de cámaras de vigilancia</option><option>Redes y telecomunicaciones</option><option>Arquitectura y cableado de red</option><option>Revisión o mejora de instalación existente</option><option>Otro servicio</option></select>
+  <label for="message">Descripción del proyecto *</label><textarea id="message" name="message" placeholder="Ejemplo: necesito instalar cámaras en una casa de dos pisos..." required></textarea>
+  <button class="btn primary" type="submit">Preparar solicitud ↗</button>
+  <div class="toast" id="formToast" role="status"></div>
+  <p class="fineprint">El formulario abre WhatsApp si se configura un número válido; de lo contrario, intenta preparar un correo. No envía información automáticamente desde esta página.</p>
+ </form>
+</div></section>
+</main>
+<footer><div class="container">
+ <div class="footer-grid">
+  <div class="footer-brand"><a class="brand" href="#inicio"><span class="logo">V</span><span>Visio<span class="brand-net">Net</span></span></a><p>Redes, telecomunicaciones, instalación de cámaras y planeación de infraestructura de cableado.</p><p style="color:var(--cyan);margin-top:10px;font-weight:750">Conexión, control y confianza.</p></div>
+  <div><h4>Explorar</h4><ul><li><a href="#servicios">Servicios</a></li><li><a href="#nosotros">Sobre VisioNet</a></li><li><a href="#proceso">Cómo trabajamos</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
+  <div><h4>Servicios</h4><ul><li><a href="#servicios">Redes y telecomunicaciones</a></li><li><a href="#servicios">Cámaras de vigilancia</a></li><li><a href="#servicios">Arquitectura de red</a></li></ul></div>
+ </div>
+ <div class="legal"><span>© <span id="year"></span> VisioNet. Todos los derechos reservados.</span><span>Conexión, control y confianza.</span></div>
+ <p class="disclaimer">Nota: esta página es una plantilla web comercial. Los datos de contacto, cobertura, capacidades, garantías, precios y condiciones deben confirmarse con la empresa antes de publicar. No implica por sí sola registro legal, certificaciones ni acreditaciones.</p>
+</div></footer>
+<script>
+// CONFIGURACIÓN: sustituye estos valores por los datos reales de VisioNet antes de publicar.
+// WhatsApp debe incluir código de país y solo números; para México normalmente comienza con 52.
+const CONFIG = {
+  whatsapp: "", // Ejemplo de formato: "529991234567" (reemplázalo por el número autorizado de la empresa)
+  email: "",    // Ejemplo: "contacto@tudominio.com"
+  serviceArea: "Valladolid, Yucatán y alrededores"
+};
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("serviceArea").textContent = CONFIG.serviceArea;
+document.getElementById("phoneDisplay").textContent = CONFIG.whatsapp ? "+" + CONFIG.whatsapp : "Pendiente de configurar";
+document.getElementById("emailDisplay").textContent = CONFIG.email || "Pendiente de configurar";
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+menuToggle.addEventListener("click", () => {
+  const open = mainNav.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+  menuToggle.textContent = open ? "✕" : "☰";
+});
+mainNav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+  mainNav.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.textContent = "☰";
+}));
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const data = new FormData(this);
+  const message = [
+    "Hola, VisioNet. Quiero solicitar información.",
+    "",
+    "Nombre: " + data.get("name"),
+    "Teléfono: " + data.get("phone"),
+    "Correo: " + (data.get("email") || "No proporcionado"),
+    "Servicio: " + data.get("service"),
+    "Proyecto: " + data.get("message")
+  ].join("\n");
+  const toast = document.getElementById("formToast");
+  if (CONFIG.whatsapp) {
+    window.open("https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(message), "_blank", "noopener,noreferrer");
+    toast.style.display = "block";
+    toast.textContent = "Se abrió WhatsApp con tu solicitud preparada. Revisa el mensaje y envíalo para contactar a la empresa.";
+  } else if (CONFIG.email) {
+    window.location.href = "mailto:" + CONFIG.email + "?subject=" + encodeURIComponent("Solicitud de información - VisioNet") + "&body=" + encodeURIComponent(message);
+    toast.style.display = "block";
+    toast.textContent = "Se abrió tu aplicación de correo con la solicitud preparada.";
+  } else {
+    const blob = new Blob([message], {type:"text/plain;charset=utf-8"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = "solicitud-VisioNet.txt"; a.click();
+    URL.revokeObjectURL(url);
+    toast.style.display = "block";
+    toast.textContent = "Todavía no se configuraron WhatsApp ni correo. Descargamos tu solicitud en un archivo de texto para que no pierdas la información.";
+  }
+});
+</script>
+</body>
+</html>

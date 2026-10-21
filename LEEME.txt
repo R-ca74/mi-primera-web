@@ -1,0 +1,23 @@
+VISiONET — SITIO WEB PROFESIONAL
+
+ARCHIVOS
+- index.html: sitio web completo, adaptable a computadora, tablet y celular.
+
+CÓMO VERLO
+1. Extrae el ZIP en una carpeta.
+2. Abre index.html con Chrome, Edge, Firefox u Opera.
+3. El sitio funciona localmente sin instalar programas ni descargar librerías externas.
+
+ANTES DE PUBLICAR (IMPORTANTE)
+Abre index.html en un editor de texto y busca el bloque CONFIGURACIÓN al final del archivo.
+Cambia:
+- whatsapp: escribe el número autorizado con código de país, solo dígitos. México normalmente empieza con 52.
+- email: correo oficial que atienda solicitudes.
+- serviceArea: zona real donde se prestan servicios.
+
+REALIDAD Y LEGITIMIDAD
+La página es un sitio web comercial listo para personalizar, pero un archivo HTML por sí solo no convierte a una marca en empresa legalmente registrada ni demuestra certificaciones, garantías o experiencia. No se inventaron RFC, domicilio, reseñas, clientes, licencias, certificaciones ni testimonios. Confirma la información real antes de publicarla.
+Para que esté en internet con una dirección pública, necesitas subir index.html a un servicio de alojamiento web y, si deseas, configurar un dominio propio. HTTPS y el dominio deben configurarse con el proveedor de alojamiento.
+
+FORMULARIO
+El formulario abre WhatsApp o correo si están configurados. Si no, descarga una copia local de la solicitud. No almacena datos en un servidor ni envía información automáticamente.
